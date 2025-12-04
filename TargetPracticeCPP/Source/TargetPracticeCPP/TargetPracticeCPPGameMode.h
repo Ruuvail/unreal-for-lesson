@@ -1,9 +1,10 @@
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
 #include "TargetPracticeCPPGameMode.generated.h"
+
+class UUserWidget;
 
 UCLASS(minimalapi)
 class ATargetPracticeCPPGameMode : public AGameModeBase
@@ -16,31 +17,40 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
-	
-	UPROPERTY(EditAnywhere, Category = "UI")
-	TSubclassOf<class UUserWidget> MainMenuClass;
+	// ---------- UI CLASSES ----------
 
+	/** Main menu widget class */
 	UPROPERTY(EditAnywhere, Category = "UI")
-	TSubclassOf<class UUserWidget> GameUIClass;
+	TSubclassOf<UUserWidget> MainMenuClass;
 
+	/** In-game HUD widget class */
 	UPROPERTY(EditAnywhere, Category = "UI")
-	TSubclassOf<class UUserWidget> GameOverUIClass;
+	TSubclassOf<UUserWidget> GameUIClass;
+
+	/** Game over widget class */
+	UPROPERTY(EditAnywhere, Category = "UI")
+	TSubclassOf<UUserWidget> GameOverUIClass;
 
 private:
-	//screen
+	/** Currently active widget on screen */
 	UPROPERTY()
-	class UUserWidget* CurrentWidget;
+	UUserWidget* CurrentWidget = nullptr;
+
+	/** Internal helper to switch widgets */
+	void SwitchToWidget(TSubclassOf<UUserWidget> WidgetClass);
 
 public:
-	// UI pass
-	UFUNCTION(BlueprintCallable)
+	// ---------- UI FLOW ----------
+
+	/** Show main menu screen */
+	UFUNCTION(BlueprintCallable, Category = "UI")
 	void ShowMainMenu();
 
-	UFUNCTION(BlueprintCallable)
+	/** Start the game and show game HUD */
+	UFUNCTION(BlueprintCallable, Category = "UI")
 	void StartGame();
 
-	UFUNCTION(BlueprintCallable)
+	/** Show game over screen */
+	UFUNCTION(BlueprintCallable, Category = "UI")
 	void ShowGameOver();
 };
-
-

@@ -21,31 +21,49 @@ void ATargetPracticeManager::BeginPlay()
 	Super::BeginPlay();
 
 	PlayerControllerRef = UGameplayStatics::GetPlayerController(this, 0);
+	if (!PlayerControllerRef)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("TargetPracticeManager: PlayerController not found."));
+	}
+
 	ShowMainMenu();
 }
 
 void ATargetPracticeManager::SwitchTo(TSubclassOf<UUserWidget> WidgetClass, ETPFlow NewState)
 {
-	// Remove previous widget
+	// remove previous widget
 	if (CurrentWidget)
 	{
 		CurrentWidget->RemoveFromParent();
 		CurrentWidget = nullptr;
 	}
 
-	// Create and add new widget
+	// create and add new widget
 	if (WidgetClass)
 	{
-		CurrentWidget = CreateWidget<UUserWidget>(GetWorld(), WidgetClass);
-		if (CurrentWidget)
+		if (UWorld* World = GetWorld())
 		{
-			CurrentWidget->AddToViewport();
+			CurrentWidget = CreateWidget<UUserWidget>(World, WidgetClass);
+			if (CurrentWidget)
+			{
+				CurrentWidget->AddToViewport();
+			}
 		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("TargetPracticeManager: SwitchTo called with null WidgetClass."));
 	}
 
 	State = NewState;
 
-	// Input mode & mouse cursor
+	// make sure controller ref exists (safety in case BeginPlay failed)
+	if (!PlayerControllerRef)
+	{
+		PlayerControllerRef = UGameplayStatics::GetPlayerController(this, 0);
+	}
+
+	// input mode & mouse cursor
 	if (PlayerControllerRef)
 	{
 		if (State == ETPFlow::Playing)
@@ -56,8 +74,12 @@ void ATargetPracticeManager::SwitchTo(TSubclassOf<UUserWidget> WidgetClass, ETPF
 		else
 		{
 			PlayerControllerRef->bShowMouseCursor = true;
+
 			FInputModeUIOnly Mode;
-			Mode.SetWidgetToFocus(CurrentWidget ? CurrentWidget->TakeWidget() : TSharedPtr<SWidget>());
+			if (CurrentWidget)
+			{
+				Mode.SetWidgetToFocus(CurrentWidget->TakeWidget());
+			}
 			PlayerControllerRef->SetInputMode(Mode);
 		}
 	}
@@ -65,10 +87,11 @@ void ATargetPracticeManager::SwitchTo(TSubclassOf<UUserWidget> WidgetClass, ETPF
 
 void ATargetPracticeManager::ShowMainMenu()
 {
-	// Clear runtime state
+	// stop timers
 	GetWorldTimerManager().ClearTimer(TimerHandle_GameTick);
 	GetWorldTimerManager().ClearTimer(TimerHandle_SpawnTick);
 
+	// reset runtime state
 	TimeRemaining = 0;
 	Score = 0;
 
@@ -77,24 +100,24 @@ void ATargetPracticeManager::ShowMainMenu()
 
 void ATargetPracticeManager::StartGame()
 {
-	// Reset score/timer
 	TimeRemaining = RoundSeconds;
 	Score = 0;
 
 	SwitchTo(GameUIClass, ETPFlow::Playing);
 
-	// Start countdown
+	// countdown timer
 	GetWorldTimerManager().SetTimer(
 		TimerHandle_GameTick, this, &ATargetPracticeManager::GameTick, 1.0f, true);
 
-	// Start spawning
+	// spawn timer
 	if (TargetClass)
 	{
-		// NOTE: I am currently debugging the spawn system.
-		// I only want to see the log output for the spawn locations for now,
-		// so I disabled the actual spawning logic inside SpawnTick().
 		GetWorldTimerManager().SetTimer(
 			TimerHandle_SpawnTick, this, &ATargetPracticeManager::SpawnTick, SpawnInterval, true);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("TargetPracticeManager: TargetClass is not set, no targets will spawn."));
 	}
 }
 
@@ -118,20 +141,16 @@ void ATargetPracticeManager::SpawnTick()
 {
 	if (!TargetClass)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("SpawnTick called but TargetClass is not set."));
+		UE_LOG(LogTemp, Warning, TEXT("TargetPracticeManager: SpawnTick called but TargetClass is null."));
 		return;
 	}
 
-	// TODO: Temporarily disabled actual spawning because some targets were spawning
-	// at weird locations outside the level. I will re-enable this loop after I fix
-	// the bounding box math.
-	//
-	// Because of this, the timer still runs, but no targets will appear in the level.
+	UWorld* World = GetWorld();
+	if (!World)
+	{
+		return;
+	}
 
-	const FVector DebugLocation = GetRandomPointInArea();
-	UE_LOG(LogTemp, Warning, TEXT("Debug SpawnTick location: %s"), *DebugLocation.ToString());
-
-	/*
 	for (int32 i = 0; i < SpawnPerTick; ++i)
 	{
 		const FVector Location = GetRandomPointInArea();
@@ -140,15 +159,15 @@ void ATargetPracticeManager::SpawnTick()
 		FActorSpawnParameters Params;
 		Params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
 
-		GetWorld()->SpawnActor<AActor>(TargetClass, Location, Rotation, Params);
+		World->SpawnActor<AActor>(TargetClass, Location, Rotation, Params);
 	}
-	*/
 }
 
 FVector ATargetPracticeManager::GetRandomPointInArea() const
 {
 	const FVector Origin = SpawnArea->Bounds.Origin;
 	const FVector Extent = SpawnArea->Bounds.BoxExtent;
+
 	return UKismetMathLibrary::RandomPointInBoundingBox(Origin, Extent);
 }
 

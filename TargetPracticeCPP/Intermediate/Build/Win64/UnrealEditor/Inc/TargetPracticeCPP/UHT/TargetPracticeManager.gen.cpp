@@ -49,12 +49,10 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeManager() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UEnum_TargetPracticeCPP_ETPFlow_Statics::Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-		{ "Comment", "/**\n * ATargetPracticeManager\n * Single actor that owns the entire Target Practice loop:\n * - UI flow (Main Menu \xe2\x86\x92 Playing \xe2\x86\x92 Game Over)\n * - Score and countdown timer\n * - Periodic target spawning inside a box volume\n *\n * Place one instance in the level and hook up widget classes + target class in Details.\n * Call StartGame/ShowMainMenu/ShowGameOver from UI or Blueprint.\n */" },
 		{ "GameOver.Name", "ETPFlow::GameOver" },
 		{ "MainMenu.Name", "ETPFlow::MainMenu" },
 		{ "ModuleRelativePath", "TargetPracticeManager.h" },
 		{ "Playing.Name", "ETPFlow::Playing" },
-		{ "ToolTip", "ATargetPracticeManager\nSingle actor that owns the entire Target Practice loop:\n- UI flow (Main Menu \xe2\x86\x92 Playing \xe2\x86\x92 Game Over)\n- Score and countdown timer\n- Periodic target spawning inside a box volume\n\nPlace one instance in the level and hook up widget classes + target class in Details.\nCall StartGame/ShowMainMenu/ShowGameOver from UI or Blueprint." },
 	};
 #endif
 	const UECodeGen_Private::FEnumParams Z_Construct_UEnum_TargetPracticeCPP_ETPFlow_Statics::EnumParams = {
@@ -188,9 +186,9 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeManager() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATargetPracticeManager_GetScore_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Game" },
-		{ "Comment", "/** Read-only accessors for UI bindings */" },
+		{ "Comment", "/** Current score for UI bindings */" },
 		{ "ModuleRelativePath", "TargetPracticeManager.h" },
-		{ "ToolTip", "Read-only accessors for UI bindings" },
+		{ "ToolTip", "Current score for UI bindings" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ATargetPracticeManager_GetScore_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATargetPracticeManager, nullptr, "GetScore", nullptr, nullptr, sizeof(Z_Construct_UFunction_ATargetPracticeManager_GetScore_Statics::TargetPracticeManager_eventGetScore_Parms), Z_Construct_UFunction_ATargetPracticeManager_GetScore_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATargetPracticeManager_GetScore_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATargetPracticeManager_GetScore_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATargetPracticeManager_GetScore_Statics::Function_MetaDataParams)) };
@@ -223,7 +221,9 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeManager() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATargetPracticeManager_GetTimeRemaining_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Game" },
+		{ "Comment", "/** Time remaining for UI bindings */" },
 		{ "ModuleRelativePath", "TargetPracticeManager.h" },
+		{ "ToolTip", "Time remaining for UI bindings" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ATargetPracticeManager_GetTimeRemaining_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATargetPracticeManager, nullptr, "GetTimeRemaining", nullptr, nullptr, sizeof(Z_Construct_UFunction_ATargetPracticeManager_GetTimeRemaining_Statics::TargetPracticeManager_eventGetTimeRemaining_Parms), Z_Construct_UFunction_ATargetPracticeManager_GetTimeRemaining_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATargetPracticeManager_GetTimeRemaining_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATargetPracticeManager_GetTimeRemaining_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATargetPracticeManager_GetTimeRemaining_Statics::Function_MetaDataParams)) };
@@ -269,9 +269,9 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeManager() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATargetPracticeManager_ShowMainMenu_Statics::Function_MetaDataParams[] = {
 		{ "Category", "UI" },
-		{ "Comment", "/** UI entry points */" },
+		{ "Comment", "// ---------- FLOW CONTROL (UI ENTRY POINTS) ----------\n" },
 		{ "ModuleRelativePath", "TargetPracticeManager.h" },
-		{ "ToolTip", "UI entry points" },
+		{ "ToolTip", "---------- FLOW CONTROL (UI ENTRY POINTS) ----------" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ATargetPracticeManager_ShowMainMenu_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATargetPracticeManager, nullptr, "ShowMainMenu", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATargetPracticeManager_ShowMainMenu_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATargetPracticeManager_ShowMainMenu_Statics::Function_MetaDataParams)) };
@@ -359,6 +359,11 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeManager() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_PlayerControllerRef_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_PlayerControllerRef;
+		static const UECodeGen_Private::FBytePropertyParams NewProp_State_Underlying;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_State_MetaData[];
+#endif
+		static const UECodeGen_Private::FEnumPropertyParams NewProp_State;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -369,10 +374,10 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeManager() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATargetPracticeManager_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ATargetPracticeManager_AddScore, "AddScore" }, // 2938433165
-		{ &Z_Construct_UFunction_ATargetPracticeManager_GetScore, "GetScore" }, // 1628843873
-		{ &Z_Construct_UFunction_ATargetPracticeManager_GetTimeRemaining, "GetTimeRemaining" }, // 3899025483
+		{ &Z_Construct_UFunction_ATargetPracticeManager_GetScore, "GetScore" }, // 1041096912
+		{ &Z_Construct_UFunction_ATargetPracticeManager_GetTimeRemaining, "GetTimeRemaining" }, // 3223920656
 		{ &Z_Construct_UFunction_ATargetPracticeManager_ShowGameOver, "ShowGameOver" }, // 1272176731
-		{ &Z_Construct_UFunction_ATargetPracticeManager_ShowMainMenu, "ShowMainMenu" }, // 3392254041
+		{ &Z_Construct_UFunction_ATargetPracticeManager_ShowMainMenu, "ShowMainMenu" }, // 1899809583
 		{ &Z_Construct_UFunction_ATargetPracticeManager_StartGame, "StartGame" }, // 27652266
 	};
 #if WITH_METADATA
@@ -384,32 +389,36 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeManager() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_MainMenuClass_MetaData[] = {
 		{ "Category", "UI" },
-		{ "Comment", "/** UI classes  */" },
+		{ "Comment", "/** Main menu widget class */" },
 		{ "ModuleRelativePath", "TargetPracticeManager.h" },
-		{ "ToolTip", "UI classes" },
+		{ "ToolTip", "Main menu widget class" },
 	};
 #endif
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_MainMenuClass = { "MainMenuClass", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeManager, MainMenuClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_MainMenuClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_MainMenuClass_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_GameUIClass_MetaData[] = {
 		{ "Category", "UI" },
+		{ "Comment", "/** In-game HUD widget class */" },
 		{ "ModuleRelativePath", "TargetPracticeManager.h" },
+		{ "ToolTip", "In-game HUD widget class" },
 	};
 #endif
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_GameUIClass = { "GameUIClass", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeManager, GameUIClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_GameUIClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_GameUIClass_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_GameOverClass_MetaData[] = {
 		{ "Category", "UI" },
+		{ "Comment", "/** Game over widget class */" },
 		{ "ModuleRelativePath", "TargetPracticeManager.h" },
+		{ "ToolTip", "Game over widget class" },
 	};
 #endif
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_GameOverClass = { "GameOverClass", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeManager, GameOverClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_GameOverClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_GameOverClass_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_TargetClass_MetaData[] = {
 		{ "Category", "Spawning" },
-		{ "Comment", "/** Target to spawn (e.g., your BP_TargetDummy) */" },
+		{ "Comment", "/** Target to spawn (e.g., BP_TargetDummy) */" },
 		{ "ModuleRelativePath", "TargetPracticeManager.h" },
-		{ "ToolTip", "Target to spawn (e.g., your BP_TargetDummy)" },
+		{ "ToolTip", "Target to spawn (e.g., BP_TargetDummy)" },
 	};
 #endif
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_TargetClass = { "TargetClass", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeManager, TargetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_TargetClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_TargetClass_MetaData)) };
@@ -427,9 +436,9 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeManager() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_SpawnInterval_MetaData[] = {
 		{ "Category", "Spawning" },
 		{ "ClampMin", "0.05" },
-		{ "Comment", "/** Spawn settings */" },
+		{ "Comment", "/** Seconds between spawn ticks */" },
 		{ "ModuleRelativePath", "TargetPracticeManager.h" },
-		{ "ToolTip", "Spawn settings" },
+		{ "ToolTip", "Seconds between spawn ticks" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_SpawnInterval = { "SpawnInterval", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeManager, SpawnInterval), METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_SpawnInterval_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_SpawnInterval_MetaData)) };
@@ -437,7 +446,9 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeManager() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_SpawnPerTick_MetaData[] = {
 		{ "Category", "Spawning" },
 		{ "ClampMin", "1" },
+		{ "Comment", "/** How many targets to spawn each tick */" },
 		{ "ModuleRelativePath", "TargetPracticeManager.h" },
+		{ "ToolTip", "How many targets to spawn each tick" },
 	};
 #endif
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_SpawnPerTick = { "SpawnPerTick", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeManager, SpawnPerTick), METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_SpawnPerTick_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_SpawnPerTick_MetaData)) };
@@ -445,27 +456,38 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeManager() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_RoundSeconds_MetaData[] = {
 		{ "Category", "Game" },
 		{ "ClampMin", "1" },
-		{ "Comment", "/** Game rules */" },
+		{ "Comment", "/** Total round duration in seconds */" },
 		{ "ModuleRelativePath", "TargetPracticeManager.h" },
-		{ "ToolTip", "Game rules" },
+		{ "ToolTip", "Total round duration in seconds" },
 	};
 #endif
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_RoundSeconds = { "RoundSeconds", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeManager, RoundSeconds), METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_RoundSeconds_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_RoundSeconds_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_CurrentWidget_MetaData[] = {
-		{ "Comment", "/** Runtime state */" },
+		{ "Comment", "/** Currently active widget on the viewport */" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "TargetPracticeManager.h" },
-		{ "ToolTip", "Runtime state" },
+		{ "ToolTip", "Currently active widget on the viewport" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_CurrentWidget = { "CurrentWidget", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeManager, CurrentWidget), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_CurrentWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_CurrentWidget_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_PlayerControllerRef_MetaData[] = {
+		{ "Comment", "/** Cached player controller reference */" },
 		{ "ModuleRelativePath", "TargetPracticeManager.h" },
+		{ "ToolTip", "Cached player controller reference" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_PlayerControllerRef = { "PlayerControllerRef", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeManager, PlayerControllerRef), Z_Construct_UClass_APlayerController_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_PlayerControllerRef_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_PlayerControllerRef_MetaData)) };
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_State_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_State_MetaData[] = {
+		{ "Comment", "/** Current game flow state */" },
+		{ "ModuleRelativePath", "TargetPracticeManager.h" },
+		{ "ToolTip", "Current game flow state" },
+	};
+#endif
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_State = { "State", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeManager, State), Z_Construct_UEnum_TargetPracticeCPP_ETPFlow, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_State_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_State_MetaData)) }; // 1328779888
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATargetPracticeManager_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_MainMenuClass,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_GameUIClass,
@@ -477,6 +499,8 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeManager() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_RoundSeconds,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_CurrentWidget,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_PlayerControllerRef,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_State_Underlying,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeManager_Statics::NewProp_State,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATargetPracticeManager_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ATargetPracticeManager>::IsAbstract,
@@ -510,19 +534,19 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeManager() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ATargetPracticeManager);
 	ATargetPracticeManager::~ATargetPracticeManager() {}
-	struct Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_Statics
 	{
 		static const FEnumRegisterCompiledInInfo EnumInfo[];
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_Statics::EnumInfo[] = {
-		{ ETPFlow_StaticEnum, TEXT("ETPFlow"), &Z_Registration_Info_UEnum_ETPFlow, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3375162172U) },
+	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_Statics::EnumInfo[] = {
+		{ ETPFlow_StaticEnum, TEXT("ETPFlow"), &Z_Registration_Info_UEnum_ETPFlow, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1328779888U) },
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATargetPracticeManager, ATargetPracticeManager::StaticClass, TEXT("ATargetPracticeManager"), &Z_Registration_Info_UClass_ATargetPracticeManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATargetPracticeManager), 12126054U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ATargetPracticeManager, ATargetPracticeManager::StaticClass, TEXT("ATargetPracticeManager"), &Z_Registration_Info_UClass_ATargetPracticeManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATargetPracticeManager), 751156704U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_3806467076(TEXT("/Script/TargetPracticeCPP"),
-		Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_1795604967(TEXT("/Script/TargetPracticeCPP"),
+		Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_Statics::ClassInfo),
 		nullptr, 0,
-		Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_Statics::EnumInfo));
+		Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeManager_h_Statics::EnumInfo));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

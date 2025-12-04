@@ -67,9 +67,9 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeCPPCharacter() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATargetPracticeCPPCharacter_GetHasRifle_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Weapon" },
-		{ "Comment", "/** Getter for the bool */" },
+		{ "Comment", "/** Getter for the rifle state */" },
 		{ "ModuleRelativePath", "TargetPracticeCPPCharacter.h" },
-		{ "ToolTip", "Getter for the bool" },
+		{ "ToolTip", "Getter for the rifle state" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ATargetPracticeCPPCharacter_GetHasRifle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATargetPracticeCPPCharacter, nullptr, "GetHasRifle", nullptr, nullptr, sizeof(Z_Construct_UFunction_ATargetPracticeCPPCharacter_GetHasRifle_Statics::TargetPracticeCPPCharacter_eventGetHasRifle_Parms), Z_Construct_UFunction_ATargetPracticeCPPCharacter_GetHasRifle_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATargetPracticeCPPCharacter_GetHasRifle_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATargetPracticeCPPCharacter_GetHasRifle_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATargetPracticeCPPCharacter_GetHasRifle_Statics::Function_MetaDataParams)) };
@@ -107,9 +107,9 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeCPPCharacter() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATargetPracticeCPPCharacter_SetHasRifle_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Weapon" },
-		{ "Comment", "/** Setter to set the bool */" },
+		{ "Comment", "/** Setter to set the rifle state */" },
 		{ "ModuleRelativePath", "TargetPracticeCPPCharacter.h" },
-		{ "ToolTip", "Setter to set the bool" },
+		{ "ToolTip", "Setter to set the rifle state" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ATargetPracticeCPPCharacter_SetHasRifle_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATargetPracticeCPPCharacter, nullptr, "SetHasRifle", nullptr, nullptr, sizeof(Z_Construct_UFunction_ATargetPracticeCPPCharacter_SetHasRifle_Statics::TargetPracticeCPPCharacter_eventSetHasRifle_Parms), Z_Construct_UFunction_ATargetPracticeCPPCharacter_SetHasRifle_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ATargetPracticeCPPCharacter_SetHasRifle_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATargetPracticeCPPCharacter_SetHasRifle_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATargetPracticeCPPCharacter_SetHasRifle_Statics::Function_MetaDataParams)) };
@@ -159,6 +159,14 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeCPPCharacter() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_LookAction;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_MoveSpeed_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_MoveSpeed;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_LookSensitivity_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_LookSensitivity;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_bHasRifle_MetaData[];
 #endif
 		static void NewProp_bHasRifle_SetBit(void* Obj);
@@ -172,8 +180,8 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeCPPCharacter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_TargetPracticeCPP,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ATargetPracticeCPPCharacter_GetHasRifle, "GetHasRifle" }, // 3071218568
-		{ &Z_Construct_UFunction_ATargetPracticeCPPCharacter_SetHasRifle, "SetHasRifle" }, // 4251108610
+		{ &Z_Construct_UFunction_ATargetPracticeCPPCharacter_GetHasRifle, "GetHasRifle" }, // 3277137050
+		{ &Z_Construct_UFunction_ATargetPracticeCPPCharacter_SetHasRifle, "SetHasRifle" }, // 1926104972
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::Class_MetaDataParams[] = {
@@ -207,9 +215,9 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeCPPCharacter() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_DefaultMappingContext_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-		{ "Comment", "/** MappingContext */" },
+		{ "Comment", "/** Mapping context for enhanced input */" },
 		{ "ModuleRelativePath", "TargetPracticeCPPCharacter.h" },
-		{ "ToolTip", "MappingContext" },
+		{ "ToolTip", "Mapping context for enhanced input" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_DefaultMappingContext = { "DefaultMappingContext", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeCPPCharacter, DefaultMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_DefaultMappingContext_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_DefaultMappingContext_MetaData)) };
@@ -242,20 +250,41 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeCPPCharacter() {}
 		{ "ToolTip", "Look Input Action" },
 	};
 #endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeCPPCharacter, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_LookAction_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_LookAction_MetaData)) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeCPPCharacter, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_LookAction_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_LookAction_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_MoveSpeed_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Movement" },
+		{ "Comment", "/** Simple multiplier for movement speed, so I can tweak it from Blueprint */" },
+		{ "ModuleRelativePath", "TargetPracticeCPPCharacter.h" },
+		{ "ToolTip", "Simple multiplier for movement speed, so I can tweak it from Blueprint" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_MoveSpeed = { "MoveSpeed", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeCPPCharacter, MoveSpeed), METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_MoveSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_MoveSpeed_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_LookSensitivity_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Movement" },
+		{ "Comment", "/** Look sensitivity for yaw / pitch input */" },
+		{ "ModuleRelativePath", "TargetPracticeCPPCharacter.h" },
+		{ "ToolTip", "Look sensitivity for yaw / pitch input" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_LookSensitivity = { "LookSensitivity", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeCPPCharacter, LookSensitivity), METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_LookSensitivity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_LookSensitivity_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_bHasRifle_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Weapon" },
-		{ "Comment", "/** Bool for AnimBP to switch to another animation set */" },
+		{ "Comment", "/** Bool for AnimBP to switch to another animation set (rifle / no rifle) */" },
 		{ "ModuleRelativePath", "TargetPracticeCPPCharacter.h" },
-		{ "ToolTip", "Bool for AnimBP to switch to another animation set" },
+		{ "ToolTip", "Bool for AnimBP to switch to another animation set (rifle / no rifle)" },
 	};
 #endif
 	void Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_bHasRifle_SetBit(void* Obj)
 	{
 		((ATargetPracticeCPPCharacter*)Obj)->bHasRifle = 1;
 	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_bHasRifle = { "bHasRifle", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(ATargetPracticeCPPCharacter), &Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_bHasRifle_SetBit, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_bHasRifle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_bHasRifle_MetaData)) };
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_bHasRifle = { "bHasRifle", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(ATargetPracticeCPPCharacter), &Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_bHasRifle_SetBit, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_bHasRifle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_bHasRifle_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_Mesh1P,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_FirstPersonCameraComponent,
@@ -263,6 +292,8 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeCPPCharacter() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_JumpAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_MoveAction,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_LookAction,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_MoveSpeed,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_LookSensitivity,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::NewProp_bHasRifle,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATargetPracticeCPPCharacter_Statics::StaticCppClassTypeInfo = {
@@ -297,15 +328,15 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeCPPCharacter() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ATargetPracticeCPPCharacter);
 	ATargetPracticeCPPCharacter::~ATargetPracticeCPPCharacter() {}
-	struct Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPCharacter_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPCharacter_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATargetPracticeCPPCharacter, ATargetPracticeCPPCharacter::StaticClass, TEXT("ATargetPracticeCPPCharacter"), &Z_Registration_Info_UClass_ATargetPracticeCPPCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATargetPracticeCPPCharacter), 2156268510U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPCharacter_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ATargetPracticeCPPCharacter, ATargetPracticeCPPCharacter::StaticClass, TEXT("ATargetPracticeCPPCharacter"), &Z_Registration_Info_UClass_ATargetPracticeCPPCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATargetPracticeCPPCharacter), 3057382126U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPCharacter_h_3562361122(TEXT("/Script/TargetPracticeCPP"),
-		Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPCharacter_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPCharacter_h_1069196930(TEXT("/Script/TargetPracticeCPP"),
+		Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

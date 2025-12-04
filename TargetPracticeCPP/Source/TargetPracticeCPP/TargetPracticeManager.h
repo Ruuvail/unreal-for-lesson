@@ -23,17 +23,23 @@ class TARGETPRACTICECPP_API ATargetPracticeManager : public AActor
 public:
 	ATargetPracticeManager();
 
-	/** UI classes  */
+	// ---------- UI CLASSES ----------
+
+	/** Main menu widget class */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI")
 	TSubclassOf<UUserWidget> MainMenuClass;
 
+	/** In-game HUD widget class */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI")
 	TSubclassOf<UUserWidget> GameUIClass;
 
+	/** Game over widget class */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI")
 	TSubclassOf<UUserWidget> GameOverClass;
 
-	/** Target to spawn (e.g., your BP_TargetDummy) */
+	// ---------- SPAWNING ----------
+
+	/** Target to spawn (e.g., BP_TargetDummy) */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Spawning")
 	TSubclassOf<AActor> TargetClass;
 
@@ -41,21 +47,27 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Spawning")
 	UBoxComponent* SpawnArea;
 
-	/** Spawn settings */
+	/** Seconds between spawn ticks */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Spawning", meta = (ClampMin = "0.05"))
 	float SpawnInterval = 1.5f;
 
+	/** How many targets to spawn each tick */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Spawning", meta = (ClampMin = "1"))
 	int32 SpawnPerTick = 1;
 
-	/** Game rules */
+	// ---------- GAME RULES ----------
+
+	/** Total round duration in seconds */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game", meta = (ClampMin = "1"))
 	int32 RoundSeconds = 60;
 
-	/** Read-only accessors for UI bindings */
+	// ---------- UI / GAME ACCESSORS ----------
+
+	/** Current score for UI bindings */
 	UFUNCTION(BlueprintCallable, Category = "Game")
 	int32 GetScore() const { return Score; }
 
+	/** Time remaining for UI bindings */
 	UFUNCTION(BlueprintCallable, Category = "Game")
 	int32 GetTimeRemaining() const { return TimeRemaining; }
 
@@ -63,7 +75,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Game")
 	void AddScore(int32 Delta);
 
-	/** UI entry points */
+	// ---------- FLOW CONTROL (UI ENTRY POINTS) ----------
+
 	UFUNCTION(BlueprintCallable, Category = "UI")
 	void ShowMainMenu();
 
@@ -77,25 +90,44 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
-	/** Internal helpers */
+	// ---------- INTERNAL HELPERS ----------
+
+	/** Switch UI and input mode to a given state */
 	void SwitchTo(TSubclassOf<UUserWidget> WidgetClass, ETPFlow NewState);
-	void GameTick();      // 1-second countdown
-	void SpawnTick();     // periodic target spawns (currently only logs, does not spawn)
+
+	/** 1-second countdown tick */
+	void GameTick();
+
+	/** Periodic target spawns while in Playing state */
+	void SpawnTick();
+
+	/** Returns a random point inside the SpawnArea box */
 	FVector GetRandomPointInArea() const;
 
 private:
-	/** Runtime state */
+	// ---------- RUNTIME STATE ----------
+
+	/** Currently active widget on the viewport */
 	UPROPERTY()
 	UUserWidget* CurrentWidget = nullptr;
 
+	/** Cached player controller reference */
 	UPROPERTY()
 	APlayerController* PlayerControllerRef = nullptr;
 
+	/** Current game flow state */
+	UPROPERTY()
 	ETPFlow State = ETPFlow::MainMenu;
 
+	/** Timer for the game countdown */
 	FTimerHandle TimerHandle_GameTick;
+
+	/** Timer for periodic target spawns */
 	FTimerHandle TimerHandle_SpawnTick;
 
+	/** Remaining time in seconds */
 	int32 TimeRemaining = 0;
+
+	/** Player score */
 	int32 Score = 0;
 };

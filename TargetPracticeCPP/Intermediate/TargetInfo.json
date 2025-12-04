@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "TargetPracticeCPP",
-			"Path": "C:\\Users\\Ruvail\\Documents\\GitHub\\UE5_graphics_programing\\TargetPracticeCPP\\Source\\TargetPracticeCPP.Target.cs",
+			"Path": "C:\\Users\\Ruvail\\Documents\\GitHub\\enlast\\unreal-for-lesson\\TargetPracticeCPP\\Source\\TargetPracticeCPP.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "TargetPracticeCPPEditor",
-			"Path": "C:\\Users\\Ruvail\\Documents\\GitHub\\UE5_graphics_programing\\TargetPracticeCPP\\Source\\TargetPracticeCPPEditor.Target.cs",
+			"Path": "C:\\Users\\Ruvail\\Documents\\GitHub\\enlast\\unreal-for-lesson\\TargetPracticeCPP\\Source\\TargetPracticeCPPEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

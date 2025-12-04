@@ -1,4 +1,4 @@
-C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Intermediate\Build\Win64\UnrealEditor\Inc\TargetPracticeCPP\UHT\TargetPracticeCPPProjectile.gen.cpp
+C:\Users\Ruvail\Documents\GitHub\enlast\unreal-for-lesson\TargetPracticeCPP\Intermediate\Build\Win64\UnrealEditor\Inc\TargetPracticeCPP\UHT\TargetPracticeCPPProjectile.gen.cpp
 /I .
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\UHT
 /I Runtime
@@ -269,8 +269,8 @@ C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Inter
 /I Runtime\MovieSceneCapture\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationDataController\UHT
 /I Developer\AnimationDataController\Public
-/I C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Intermediate\Build\Win64\UnrealEditor\Inc\TargetPracticeCPP\UHT
-/I C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Source
+/I C:\Users\Ruvail\Documents\GitHub\enlast\unreal-for-lesson\TargetPracticeCPP\Intermediate\Build\Win64\UnrealEditor\Inc\TargetPracticeCPP\UHT
+/I C:\Users\Ruvail\Documents\GitHub\enlast\unreal-for-lesson\TargetPracticeCPP\Source
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AugmentedReality\UHT
 /I Runtime\AugmentedReality\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\MRMesh\UHT
@@ -287,12 +287,12 @@ C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Inter
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-/FI"C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Intermediate\Build\Win64\TargetPracticeCPPEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/FI"C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Intermediate\Build\Win64\UnrealEditor\Development\TargetPracticeCPP\Definitions.TargetPracticeCPP.h"
-/Yu"C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Intermediate\Build\Win64\TargetPracticeCPPEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Intermediate\Build\Win64\TargetPracticeCPPEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-/Fo"C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Intermediate\Build\Win64\UnrealEditor\Development\TargetPracticeCPP\TargetPracticeCPPProjectile.gen.cpp.lc.obj"
-/sourceDependencies"C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Intermediate\Build\Win64\UnrealEditor\Development\TargetPracticeCPP\TargetPracticeCPPProjectile.gen.cpp.dep.lc.json"
+/FI"C:\Users\Ruvail\Documents\GitHub\enlast\unreal-for-lesson\TargetPracticeCPP\Intermediate\Build\Win64\TargetPracticeCPPEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/FI"C:\Users\Ruvail\Documents\GitHub\enlast\unreal-for-lesson\TargetPracticeCPP\Intermediate\Build\Win64\UnrealEditor\Development\TargetPracticeCPP\Definitions.TargetPracticeCPP.h"
+/Yu"C:\Users\Ruvail\Documents\GitHub\enlast\unreal-for-lesson\TargetPracticeCPP\Intermediate\Build\Win64\TargetPracticeCPPEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"C:\Users\Ruvail\Documents\GitHub\enlast\unreal-for-lesson\TargetPracticeCPP\Intermediate\Build\Win64\TargetPracticeCPPEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+/Fo"C:\Users\Ruvail\Documents\GitHub\enlast\unreal-for-lesson\TargetPracticeCPP\Intermediate\Build\Win64\UnrealEditor\Development\TargetPracticeCPP\TargetPracticeCPPProjectile.gen.cpp.lc.obj"
+/sourceDependencies"C:\Users\Ruvail\Documents\GitHub\enlast\unreal-for-lesson\TargetPracticeCPP\Intermediate\Build\Win64\UnrealEditor\Development\TargetPracticeCPP\TargetPracticeCPPProjectile.gen.cpp.dep.lc.json"
 /Zc:inline
 /nologo
 /Oi

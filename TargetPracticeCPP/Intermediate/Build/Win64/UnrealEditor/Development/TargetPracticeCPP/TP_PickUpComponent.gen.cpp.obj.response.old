@@ -1,18 +1,16 @@
 C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Intermediate\Build\Win64\UnrealEditor\Inc\TargetPracticeCPP\UHT\TP_PickUpComponent.gen.cpp
 /I .
-/I C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Intermediate\Build\Win64\UnrealEditor\Inc\TargetPracticeCPP\UHT
-/I C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Source
-/I Runtime
-/I Runtime\TraceLog\Public
-/I Runtime\Core\Public
-/I ..\Intermediate\Build\Win64\UnrealEditor\Inc\CoreUObject\UHT
-/I Runtime\CoreUObject\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\UHT
+/I Runtime
 /I ..\Shaders\Shared
 /I Runtime\Engine\Classes
 /I Runtime\Engine\Public
+/I Runtime\TraceLog\Public
+/I Runtime\Core\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\CoreOnline\UHT
 /I Runtime\CoreOnline\Public
+/I ..\Intermediate\Build\Win64\UnrealEditor\Inc\CoreUObject\UHT
+/I Runtime\CoreUObject\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\NetCore\UHT
 /I Runtime\Net
 /I Runtime\Net\Core\Classes
@@ -271,6 +269,8 @@ C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Inter
 /I Runtime\MovieSceneCapture\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationDataController\UHT
 /I Developer\AnimationDataController\Public
+/I C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Intermediate\Build\Win64\UnrealEditor\Inc\TargetPracticeCPP\UHT
+/I C:\Users\Ruvail\Documents\GitHub\UE5_graphics_programing\TargetPracticeCPP\Source
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AugmentedReality\UHT
 /I Runtime\AugmentedReality\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\MRMesh\UHT

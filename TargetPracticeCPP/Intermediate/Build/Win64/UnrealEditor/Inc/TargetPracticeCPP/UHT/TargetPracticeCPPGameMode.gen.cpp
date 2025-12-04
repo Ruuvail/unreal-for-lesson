@@ -56,7 +56,10 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeCPPGameMode() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATargetPracticeCPPGameMode_ShowGameOver_Statics::Function_MetaDataParams[] = {
+		{ "Category", "UI" },
+		{ "Comment", "/** Show game over screen */" },
 		{ "ModuleRelativePath", "TargetPracticeCPPGameMode.h" },
+		{ "ToolTip", "Show game over screen" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ATargetPracticeCPPGameMode_ShowGameOver_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATargetPracticeCPPGameMode, nullptr, "ShowGameOver", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATargetPracticeCPPGameMode_ShowGameOver_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATargetPracticeCPPGameMode_ShowGameOver_Statics::Function_MetaDataParams)) };
@@ -78,9 +81,10 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeCPPGameMode() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATargetPracticeCPPGameMode_ShowMainMenu_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "// UI pass\n" },
+		{ "Category", "UI" },
+		{ "Comment", "/** Show main menu screen */" },
 		{ "ModuleRelativePath", "TargetPracticeCPPGameMode.h" },
-		{ "ToolTip", "UI pass" },
+		{ "ToolTip", "Show main menu screen" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ATargetPracticeCPPGameMode_ShowMainMenu_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATargetPracticeCPPGameMode, nullptr, "ShowMainMenu", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATargetPracticeCPPGameMode_ShowMainMenu_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATargetPracticeCPPGameMode_ShowMainMenu_Statics::Function_MetaDataParams)) };
@@ -102,7 +106,10 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeCPPGameMode() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ATargetPracticeCPPGameMode_StartGame_Statics::Function_MetaDataParams[] = {
+		{ "Category", "UI" },
+		{ "Comment", "/** Start the game and show game HUD */" },
 		{ "ModuleRelativePath", "TargetPracticeCPPGameMode.h" },
+		{ "ToolTip", "Start the game and show game HUD" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ATargetPracticeCPPGameMode_StartGame_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ATargetPracticeCPPGameMode, nullptr, "StartGame", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ATargetPracticeCPPGameMode_StartGame_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ATargetPracticeCPPGameMode_StartGame_Statics::Function_MetaDataParams)) };
@@ -152,9 +159,9 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeCPPGameMode() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_TargetPracticeCPP,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ATargetPracticeCPPGameMode_ShowGameOver, "ShowGameOver" }, // 3284003288
-		{ &Z_Construct_UFunction_ATargetPracticeCPPGameMode_ShowMainMenu, "ShowMainMenu" }, // 3733560839
-		{ &Z_Construct_UFunction_ATargetPracticeCPPGameMode_StartGame, "StartGame" }, // 587226711
+		{ &Z_Construct_UFunction_ATargetPracticeCPPGameMode_ShowGameOver, "ShowGameOver" }, // 1913229876
+		{ &Z_Construct_UFunction_ATargetPracticeCPPGameMode_ShowMainMenu, "ShowMainMenu" }, // 862748402
+		{ &Z_Construct_UFunction_ATargetPracticeCPPGameMode_StartGame, "StartGame" }, // 1563895501
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::Class_MetaDataParams[] = {
@@ -167,30 +174,36 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeCPPGameMode() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_MainMenuClass_MetaData[] = {
 		{ "Category", "UI" },
+		{ "Comment", "/** Main menu widget class */" },
 		{ "ModuleRelativePath", "TargetPracticeCPPGameMode.h" },
+		{ "ToolTip", "Main menu widget class" },
 	};
 #endif
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_MainMenuClass = { "MainMenuClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeCPPGameMode, MainMenuClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_MainMenuClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_MainMenuClass_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_GameUIClass_MetaData[] = {
 		{ "Category", "UI" },
+		{ "Comment", "/** In-game HUD widget class */" },
 		{ "ModuleRelativePath", "TargetPracticeCPPGameMode.h" },
+		{ "ToolTip", "In-game HUD widget class" },
 	};
 #endif
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_GameUIClass = { "GameUIClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeCPPGameMode, GameUIClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_GameUIClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_GameUIClass_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_GameOverUIClass_MetaData[] = {
 		{ "Category", "UI" },
+		{ "Comment", "/** Game over widget class */" },
 		{ "ModuleRelativePath", "TargetPracticeCPPGameMode.h" },
+		{ "ToolTip", "Game over widget class" },
 	};
 #endif
 	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_GameOverUIClass = { "GameOverUIClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeCPPGameMode, GameOverUIClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_GameOverUIClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_GameOverUIClass_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_CurrentWidget_MetaData[] = {
-		{ "Comment", "//screen\n" },
+		{ "Comment", "/** Currently active widget on screen */" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "TargetPracticeCPPGameMode.h" },
-		{ "ToolTip", "screen" },
+		{ "ToolTip", "Currently active widget on screen" },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_CurrentWidget = { "CurrentWidget", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(ATargetPracticeCPPGameMode, CurrentWidget), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_CurrentWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATargetPracticeCPPGameMode_Statics::NewProp_CurrentWidget_MetaData)) };
@@ -232,15 +245,15 @@ void EmptyLinkFunctionForGeneratedCodeTargetPracticeCPPGameMode() {}
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ATargetPracticeCPPGameMode);
 	ATargetPracticeCPPGameMode::~ATargetPracticeCPPGameMode() {}
-	struct Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPGameMode_h_Statics
+	struct Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPGameMode_h_Statics
 	{
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
-	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPGameMode_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATargetPracticeCPPGameMode, ATargetPracticeCPPGameMode::StaticClass, TEXT("ATargetPracticeCPPGameMode"), &Z_Registration_Info_UClass_ATargetPracticeCPPGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATargetPracticeCPPGameMode), 3072379223U) },
+	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPGameMode_h_Statics::ClassInfo[] = {
+		{ Z_Construct_UClass_ATargetPracticeCPPGameMode, ATargetPracticeCPPGameMode::StaticClass, TEXT("ATargetPracticeCPPGameMode"), &Z_Registration_Info_UClass_ATargetPracticeCPPGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATargetPracticeCPPGameMode), 397657137U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPGameMode_h_729820238(TEXT("/Script/TargetPracticeCPP"),
-		Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_UE5_graphics_programing_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPGameMode_h_Statics::ClassInfo),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPGameMode_h_2938713292(TEXT("/Script/TargetPracticeCPP"),
+		Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Ruvail_Documents_GitHub_enlast_unreal_for_lesson_TargetPracticeCPP_Source_TargetPracticeCPP_TargetPracticeCPPGameMode_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
