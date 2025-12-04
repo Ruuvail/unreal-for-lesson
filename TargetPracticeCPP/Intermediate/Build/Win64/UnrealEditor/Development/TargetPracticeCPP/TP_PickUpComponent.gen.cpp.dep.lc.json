@@ -1,7 +1,7 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\source\\targetpracticecpp\\tp_pickupcomponent.cpp",
+        "Source": "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\intermediate\\build\\win64\\unrealeditor\\inc\\targetpracticecpp\\uht\\tp_pickupcomponent.gen.cpp",
         "ProvidedModule": "",
         "PCH": "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\intermediate\\build\\win64\\targetpracticecppeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
         "Includes": [

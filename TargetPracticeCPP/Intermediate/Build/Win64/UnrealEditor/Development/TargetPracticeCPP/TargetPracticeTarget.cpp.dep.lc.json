@@ -1,0 +1,18 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\source\\targetpracticecpp\\targetpracticetarget.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\intermediate\\build\\win64\\targetpracticecppeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\intermediate\\build\\win64\\unrealeditor\\development\\targetpracticecpp\\definitions.targetpracticecpp.h",
+            "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\source\\targetpracticecpp\\targetpracticetarget.h",
+            "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\intermediate\\build\\win64\\unrealeditor\\inc\\targetpracticecpp\\uht\\targetpracticetarget.generated.h",
+            "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\source\\targetpracticecpp\\targetpracticemanager.h",
+            "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\intermediate\\build\\win64\\unrealeditor\\inc\\targetpracticecpp\\uht\\targetpracticemanager.generated.h",
+            "c:\\program files\\epic games\\ue_5.1\\engine\\source\\runtime\\engine\\public\\engineutils.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\intermediate\\build\\win64\\unrealeditor\\inc\\targetpracticecpp\\uht\\targetdummy.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\intermediate\\build\\win64\\targetpracticecppeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\intermediate\\build\\win64\\unrealeditor\\development\\targetpracticecpp\\definitions.targetpracticecpp.h",
+            "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\source\\targetpracticecpp\\targetdummy.h",
+            "c:\\users\\ruvail\\documents\\github\\enlast\\unreal-for-lesson\\targetpracticecpp\\intermediate\\build\\win64\\unrealeditor\\inc\\targetpracticecpp\\uht\\targetdummy.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
